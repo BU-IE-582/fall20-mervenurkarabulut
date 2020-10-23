@@ -1,6 +1,7 @@
 # Progress Journal
 
 
+
 ## Week 0 (October 23)
 
 -To see HW 0 description, click [here](files/IE582_Fall20_Homework_0.pdf)

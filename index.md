@@ -1,4 +1,5 @@
-# Example Progress Journal
+# Progress Journal
+
 
 ## Week 0 (October 23)
 

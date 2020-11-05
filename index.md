@@ -8,7 +8,6 @@
 
 ## Week 1 (November 6)
 
--[Here](files/hw1/Untitled.html) html file.
--[Here](files/hw1/Untitled.ipynb) ipynb file.
+-[HW1 Description](files/hw1/IE582_Fall20_Homework1.pdf)
 
 

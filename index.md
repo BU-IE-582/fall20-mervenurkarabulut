@@ -8,6 +8,6 @@
 
 ## Week 1 (November 6)
 
--[Here] (files/hw1/untitled.html)
+-[Here](files/hw1/untitled.html)
 
 

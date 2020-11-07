@@ -7,6 +7,4 @@
 
 -[HW1 Description](files/hw1/IE582_Fall20_Homework1.pdf)
 
-## -Task 1
--[Task1](files/hw1/task1.html)
-
+-[Here](files/hw1/task1.html) is the **Task 1** results. (Codes are provided [here](files/hw1/).)

@@ -36,7 +36,7 @@ match_data
 ## Question 1
 
 ```python
-plt.hist(match_data["FTHG"])
+plt.hist(match_data["FTHG"],align="left",rwidth=0.8)
 plt.xlabel("Home Goals")
 plt.ylabel("Number of Games")
 plt.title("Home Score")
@@ -44,7 +44,7 @@ plt.show()
 ```
 
 ```python
-plt.hist(match_data["FTAG"],color="#009E73")
+plt.hist(match_data["FTAG"],color="#009E73",align="left",rwidth=0.8)
 plt.xlabel("Away Goals")
 plt.ylabel("Number of Games")
 plt.title("Away Score")
@@ -53,7 +53,7 @@ plt.show()
 
 ```python
 match_data["FTHG"]-match_data["FTAG"]
-plt.hist(match_data["FTHG"]-match_data["FTAG"],color="black")
+plt.hist(match_data["FTHG"]-match_data["FTAG"],color="black",align="left",rwidth=0.8)
 plt.xlabel("Home goals – Away Goals")
 plt.ylabel("Number of Games")
 plt.title("Score Difference")
@@ -64,6 +64,7 @@ plt.show()
 
 ```python
 import statistics as st
+from scipy.stats import poisson
 
 home_mean = st.mean(match_data["FTHG"])
 away_mean = st.mean(match_data["FTAG"])
@@ -71,15 +72,12 @@ home_mean, away_mean
 ```
 
 ```python
-plt.hist(match_data["FTHG"],density=True,label="Data")
+pois = poisson.pmf(np.arange(0,9), home_mean)*len(match_data)
+n, bins, patches = plt.hist(match_data["FTHG"], np.arange(9),color='red',align="left",rwidth=0.8,histtype ='bar',label="Data")
+plt.plot(bins, pois, color='blue', marker='o', linestyle="dashed",label="Poisson PMF")
 plt.xlabel("Home Goals")
-plt.ylabel("Probability")
+plt.ylabel("Number of Games")
 plt.title("Home Score")
-mn, mx = plt.xlim()
-probs = []
-for score in np.arange(mn,mx+1):
-    probs.append(poisson.pmf(score,home_mean))
-plt.plot(probs, label="Poisson PMF")
 plt.legend(loc="upper right")
 plt.show()
 ```
@@ -87,15 +85,12 @@ plt.show()
 This graph shows that **Home Goals** data distribution looks like *Poisson* distribution with $ \lambda = 1.537 $ . 
 
 ```python
-plt.hist(match_data["FTAG"],density=True,label="Data",color="#009E73")
+pois = poisson.pmf(np.arange(0,9), away_mean)*len(match_data)
+n, bins, patches = plt.hist(match_data["FTAG"], np.arange(9),color='#009E73',align="left",rwidth=0.8,histtype ='bar',label="Data")
+plt.plot(bins, pois, color='red', marker='o', linestyle="dashed",label="Poisson PMF")
 plt.xlabel("Away Goals")
-plt.ylabel("Probability")
+plt.ylabel("Number of Games")
 plt.title("Away Score")
-mn, mx = plt.xlim()
-probs = []
-for score in np.arange(mn,mx+1):
-    probs.append(poisson.pmf(score,away_mean))
-plt.plot(probs, label="Poisson PMF")
 plt.legend(loc="upper right")
 plt.show()
 ```

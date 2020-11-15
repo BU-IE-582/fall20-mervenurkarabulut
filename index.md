@@ -1,5 +1,7 @@
 # Progress Journal
+Results and codes for the **IE582** course homeworks are provided below.
 
+# Homework 0 
 - [Here](files/example_homework_0.html) are some R examples.
 
 # Homework 1 

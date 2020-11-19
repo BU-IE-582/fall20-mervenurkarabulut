@@ -41,7 +41,7 @@ match_data[["B365H_prob","B365D_prob","B365A_prob","BWH_prob","BWD_prob","BWA_pr
             "WHH_prob","WHD_prob","WHA_prob"]]
 ```
 
-These are the **probabilities** of "home win", "draw" and "away win" given by four bookmakers respectively: **Bet365, BetAndWin, Pinnacle and some bookmaker**.
+These are the **probabilities** of "home win", "draw" and "away win" given by four bookmakers respectively: **Bet365, BetAndWin, Pinnacle and William Hill**.
 
 ```python
 match_data["Bet365_sum"] = match_data.apply(lambda x: sum(x[["B365H_prob","B365D_prob","B365A_prob"]]),axis=1)
@@ -62,7 +62,7 @@ match_data[["B365H_norm_prob","B365D_norm_prob","B365A_norm_prob","BWH_norm_prob
            "PSH_norm_prob","PSD_norm_prob","PSA_norm_prob","WHH_norm_prob","WHD_norm_prob","WHA_norm_prob"]]
 ```
 
-These are the **normalized probabilities** of "home win", "draw" and "away win" given by four bookmakers respectively: **Bet365, BetAndWin, Pinnacle and some bookmaker**.
+These are the **normalized probabilities** of "home win", "draw" and "away win" given by four bookmakers respectively: **Bet365, BetAndWin, Pinnacle and William Hill**.
 
 ```python
 match_data["draw"] = match_data["FTR"].apply(lambda x: 1 if x=="D" else 0)
@@ -119,11 +119,11 @@ match_data["WH_diff"] = match_data["WHH_norm_prob"]-match_data["WHA_norm_prob"]
 match_data["range"] = pd.cut(match_data["WH_diff"], bins, right=True, labels=False) + 1
 actual = match_data.groupby(["range"]).sum()/match_data.groupby(["range"]).count()
 
-plt.scatter(match_data["WH_diff"], match_data["WHD_norm_prob"], marker='o',c="purple",edgecolors="black",label="A Bookmaker probabilities")
+plt.scatter(match_data["WH_diff"], match_data["WHD_norm_prob"], marker='o',c="purple",edgecolors="black",label="William Hill probabilities")
 plt.plot(bin_ranges,actual["draw"],color="aqua",label="Actual outcome")
 plt.xlabel("P(Home)-P(Away)")
 plt.ylabel("P(Draw)")
-plt.title("A Bookmaker")
+plt.title("William Hill")
 plt.legend(loc="lower center")
 plt.show()
 ```
@@ -197,7 +197,7 @@ without_redCard["range"] = pd.cut(without_redCard["WH_diff"], bins, right=True, 
 actual = without_redCard.groupby(["range"]).sum()/without_redCard.groupby(["range"]).count()
 
 plt.scatter(without_redCard["WH_diff"], without_redCard["WHD_norm_prob"], marker='o',c="purple",edgecolors="black",
-            label="A Bookmaker probabilities")
+            label="William Hill probabilities")
 plt.plot(bin_ranges,actual["draw"],color="tab:orange",label="Actual outcome with no red cards")
 
 match_data["range"] = pd.cut(match_data["WH_diff"], bins, right=True, labels=False) + 1
@@ -206,7 +206,7 @@ plt.plot(bin_ranges,actual["draw"],color="aqua",label="Actual Outcome")
 
 plt.xlabel("P(Home)-P(Away)")
 plt.ylabel("P(Draw)")
-plt.title("A Bookmaker")
+plt.title("William Hill")
 plt.legend(loc="lower center")
 plt.show()
 ```

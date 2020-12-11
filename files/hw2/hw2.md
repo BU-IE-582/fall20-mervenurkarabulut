@@ -363,4 +363,4 @@ plt.show()
 ### Comments:
 - Gestures 1 and 6 and 4 and 5 are not successfully seperated from each other.
 - Gestures 2,7 and 8 are seperated from other classes more successfully.
-- Although there are some overlaps between different gesture classes, seperately they are clustered in a good way. 
+- Although there are some overlaps between different gesture classes, considering seperately they are clustered successfully and this can be used for classification. 

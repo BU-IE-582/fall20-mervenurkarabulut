@@ -11,3 +11,4 @@ Reports and codes for the **IE582** homeworks are provided below.
 * [Here](files/hw1/task2-3.html) is **Task 2 & 3** and [codes](files/hw1/task2-3.ipynb).
 
 # Homework 2 
+* [HW2 Description](files/hw2/IE582_Fall20_Homework2.pdf)

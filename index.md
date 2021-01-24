@@ -20,3 +20,5 @@ Reports and codes for the **IE582** homeworks are provided below.
 
 # Homework 4 
 * [HW4 Description](files/hw4/IE582_Fall2020_Homework4.pdf)
+* [Hill-Valley Data Set] (files/hw4/Hill-Valley Data Set.html)
+

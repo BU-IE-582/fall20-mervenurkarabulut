@@ -22,4 +22,7 @@ Reports and codes for the **IE582** homeworks are provided below.
 * [HW4 Description](files/hw4/IE582_Fall2020_Homework4.pdf)
 * Hill-Valley Data Set [report](files/hw4/Hill-Valley-Data-Set.html) and [codes](files/hw4/Hill-Valley-Data-Set.ipynb)
 * Communities and Crime Data Set [report](files/hw4/CrimeDat.html) and [codes](files/hw4/CrimeDat.ipynb)
+* Anuran Calls (MFCCs) Data Set [report](files/hw4/AnuranCalls.html) and [codes](files/hw4/AnuranCalls.ipynb)
+* Breast Cancer Wisconsin (Diagnostic) Data Set [report](files/hw4/CancerData.html) and [codes](files/hw4/CancerData.ipynb)
+
 

@@ -25,4 +25,7 @@ Reports and codes for the **IE582** homeworks are provided below.
 * Anuran Calls (MFCCs) Data Set [report](files/hw4/AnuranCalls.html) and [codes](files/hw4/AnuranCalls.ipynb)
 * Breast Cancer Wisconsin (Diagnostic) Data Set [report](files/hw4/CancerData.html) and [codes](files/hw4/CancerData.ipynb)
 
+# Final
+* Final Project [report](files/project/IE582-FinalProject.pdf) and [code](files/project/IE582-FinalProject.ipynb)
+
 
